@@ -3,6 +3,7 @@ Objetivo del proyecto: Crear una tienda online completa(front y backend) con la 
 
 Las Caractericas de la aplicacion: 
 * Frontend simple que despliega productos por busqueda dinamicamente
+[Link del Demo](http://front-ecommerce-test.s3-website-us-east-1.amazonaws.com/)
 
 ## Tecnologias-Librerias-usadas
 Frontend :
@@ -13,7 +14,7 @@ Frontend :
 * [Axios](https://axios-http.com/docs/intro)
 
 CI/CD Frontend:
-Estoy integrando integrancion continua(CI/CD) a un bucker s3 de aws, no me detengo a explicar los pasos para integrar CI/CD  a  s3 de aws porque me explayaria bastante, 
+Estoy integrando integrancion continua(CI/CD) a un bucket s3 de aws, no me detengo a explicar los pasos para integrar CI/CD  a  s3 de aws porque me explayaria bastante, 
 Git Actions nos permite ejecutar entornos de prueba y manejar deployments automatizados con criterios que podemos definir , en este caso no necesito ejecutar casos de prueba,
 Entonces cada vez que mando un commit a la rama main, el script [main.yml](./.github/workflows/main.yml) ejecutara el workflow para subir nuestro directorio a un bucket de aws,
 se tiene que configurar la cuenta aws para permitir la integracion de Git Actions.
