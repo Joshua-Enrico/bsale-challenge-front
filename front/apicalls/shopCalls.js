@@ -21,8 +21,13 @@ const getProductsBySearch = (selectArg, order) => {
     let orderP = ""
 
     if (selectArg){
-        arg = selectArg
+        if (selectArg == "default"){
+            'pass'
+        } else {
+            arg = selectArg
+        }
     }
+
     if (order){
         orderP = order
     }
@@ -95,13 +100,11 @@ const getProductsByPage = ( page, size, arg, sort) => {
 
 /* Hace una llamada cuando interactuamos con el filtro */
 $("#selectbox").change(function () {
-    let urlarg = getParams('arg');
-    console.log(urlarg)
+
     let arg = $("#select").val();
-    if (urlarg && arg === "all") {
-        arg = urlarg
-    }
 
     const order = $("#orderBy").val();
+
+    console.log(arg, order)
     getProductsBySearch(arg, order);
 });
